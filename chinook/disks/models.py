@@ -5,7 +5,7 @@ class Track(models.Model):
     A single track in an album
     """
     name = models.CharField(max_length=200)
-    composer = models.CharField(max_length=200)
+    composer = models.CharField(max_length=200, null=True)
     milliseconds = models.IntegerField('Duration (ms)')
     bytes = models.IntegerField('Size (bytes)')
     unitPrice = models.FloatField('Unit Price (EUR)') 
